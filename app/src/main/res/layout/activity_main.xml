@@ -25,21 +25,41 @@
         android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
-            android:id="@+id/tvSettings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ISO 100 | f/2.8"
-            android:textColor="#FFCC00"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/tvShutterSpeed"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Measuring..."
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinnerISO"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFCC00" />
+
+            <Spinner
+                android:id="@+id/spinnerShutter"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFCC00" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommended Aperture"
+            android:textColor="#FFCC00"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/tvAperture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="f/--"
             android:textColor="#FFFFFF"
-            android:textSize="28sp"
+            android:textSize="42sp"
             android:textStyle="bold"
             android:layout_marginTop="4dp"/>
     </LinearLayout>
